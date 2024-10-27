@@ -1,3 +1,8 @@
+// Name: Matthew Gordy
+// USC NetID: mgordy
+// CSCI 455 Fall 2024
+// Lab 8
+
 /* 
  * Contains isSorted method and
  * tests it on a bunch of hardcoded test cases, printing out test

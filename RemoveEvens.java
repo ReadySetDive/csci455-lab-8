@@ -1,3 +1,8 @@
+// Name: Matthew Gordy
+// USC NetID: mgordy
+// CSCI 455 Fall 2024
+// Lab 8
+
 import java.util.Stack;
 import java.util.Scanner;
 import java.util.Iterator;
