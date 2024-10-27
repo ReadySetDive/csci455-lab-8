@@ -6,6 +6,13 @@ public class RemoveEvens {
    public static void main(String[] args) {
 
       doOneTest(createStack("1 2 3 2 4 5"), "1 3 5");
+      doOneTest(createStack(""), "");
+      doOneTest(createStack("2 2 2 2 2"), "");
+      doOneTest(createStack("1 1 1 1 1 1"), "1 1 1 1 1 1");
+      doOneTest(createStack("111111111 100000000"), "111111111");
+      doOneTest(createStack("10"), "");
+      doOneTest(createStack("11"), "11");
+
    }
 
 

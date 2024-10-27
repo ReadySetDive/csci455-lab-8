@@ -5,6 +5,7 @@
  * match expected results.
  */
 
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.ListIterator;
 import java.util.Scanner;
@@ -15,9 +16,14 @@ public class IsSortedTester {
     * isSorted.  Returns true iff the list is a non-decreasing sequence of integers. 
     */
    public static boolean isSorted(LinkedList<Integer> list) {
-
-      return false;  // DUMMY CODE TO GET IT TO COMPILE
-
+      Iterator<Integer> iter = list.iterator();
+      int i = Integer.MIN_VALUE;
+      while (iter.hasNext()){
+         if (i>(i=iter.next())){
+            return false;
+         }
+      }
+      return true;
    }
 
 

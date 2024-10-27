@@ -1,11 +1,35 @@
-Name:
-USC NetID:
+Name: Matthew Gordy
+USC NetID: mgordy
 CSCI 455 Fall 2024
 Lab 8
 
 
 Ex 2 (output of running tester with thorough test cases include before implementing removeEvens)
 
+Stack before: [1, 2, 3, 2, 4, 5] <-- top
+Expected value of stack after: 1 3 5 <-- top
+Actual stack value after removeEvens: [1, 2, 3, 2, 4, 5] <-- top
 
+Stack before: [] <-- top
+Expected value of stack after:  <-- top
+Actual stack value after removeEvens: [] <-- top
 
+Stack before: [2, 2, 2, 2, 2] <-- top
+Expected value of stack after:  <-- top
+Actual stack value after removeEvens: [2, 2, 2, 2, 2] <-- top
 
+Stack before: [1, 1, 1, 1, 1, 1] <-- top
+Expected value of stack after: 1 1 1 1 1 1 <-- top
+Actual stack value after removeEvens: [1, 1, 1, 1, 1, 1] <-- top
+
+Stack before: [111111111, 100000000] <-- top
+Expected value of stack after: 111111111 <-- top
+Actual stack value after removeEvens: [111111111, 100000000] <-- top
+
+Stack before: [10] <-- top
+Expected value of stack after:  <-- top
+Actual stack value after removeEvens: [10] <-- top
+
+Stack before: [11] <-- top
+Expected value of stack after: 11 <-- top
+Actual stack value after removeEvens: [11] <-- top
