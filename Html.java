@@ -13,19 +13,19 @@ public class Html {
       // WARNING: the expected results here have not been set yet to correspond to the
       // string being tested: part of the lab is to update these correctly
       
-      testOneString("<p> </p>", false);
+      testOneString("<p> </p>", true);
       testOneString("<p> <p>", false);
       testOneString("<p> </q>", false);
       testOneString("<p>", false);
-      testOneString("no-tag file is fine", false);
+      testOneString("no-tag file is fine", true);
       testOneString("</p>", false);
       testOneString("<p> <q> </p> </q>", false);
-      testOneString("<p> <ul> <li> </li> </ul> <a> </a> </p>", false);
+      testOneString("<p> <ul> <li> </li> </ul> <a> </a> </p>", true);
       testOneString("<p> <ul> <li> </li> </ul> <a> </p>", false);
       testOneString("<p> <ul> <li> </li> </ul> <a> </a>", false);
       testOneString("<p> <ul> <li> </li> </ul> <a> </a> </p> </p>", false);
-      testOneString("<p> <ul> <li> <a> </a> </li> </ul> <a> </a> </p>", false);
-      testOneString("<p> xxx <ul> yyy <li> zzz </li> www xxx </ul> yyy <a> </a> zzz </p> mmm", false);
+      testOneString("<p> <ul> <li> <a> </a> </li> </ul> <a> </a> </p>", true);
+      testOneString("<p> xxx <ul> yyy <li> zzz </li> www xxx </ul> yyy <a> </a> zzz </p> mmm", true);
       testOneString("<p> xxx <ul> yyy <li> zzz </li> www xxx yyy <a> </a> zzz </p> mmm", false);
 
    }
