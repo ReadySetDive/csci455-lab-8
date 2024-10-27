@@ -5,6 +5,8 @@
 
 import java.util.Stack;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 // problem from E15.20 in Big Java: Early Objects, 7th ed
 public class Html {
@@ -47,8 +49,23 @@ public class Html {
    // PRE: only works if the tags are separated by whitespace, and the other text
    //   is separated from the tags with whitespace   
    public static boolean matchingTags(Scanner in) {
-      
-      return true; // DUMMY CODE TO GET IT TO COMPILE
+      Stack<String> tagStack = new Stack<String>();
+      Pattern pattern = Pattern.compile("<(/)?(\\w*?)>", Pattern.CASE_INSENSITIVE);
+      Matcher matcher;
+      while (in.hasNext()){
+         matcher = pattern.matcher(in.next());
+         if (matcher.matches()){
+            if (matcher.group(1) == "/"){
+               
+               if (tagStack.pop() != matcher.group(2)) {
+                  return false;
+               }
+            } else {
+               tagStack.push(matcher.group(2));
+            }
+         }
+      }
+      return true;
          
    }
 
