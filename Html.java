@@ -56,7 +56,7 @@ public class Html {
          matcher = pattern.matcher(in.next());
          if (matcher.matches()){
             if (matcher.group(1) != null){
-               if ((tagStack.size()>0) && (tagStack.pop() != matcher.group(2))) {
+               if ((tagStack.size()==0) || (!tagStack.pop().equals(matcher.group(2)))) {
                   return false;
                }
             } else {
