@@ -50,14 +50,13 @@ public class Html {
    //   is separated from the tags with whitespace   
    public static boolean matchingTags(Scanner in) {
       Stack<String> tagStack = new Stack<String>();
-      Pattern pattern = Pattern.compile("<(/)?(\\w*?)>", Pattern.CASE_INSENSITIVE);
+      Pattern pattern = Pattern.compile("<(/)?(\\w+?)>", Pattern.CASE_INSENSITIVE);
       Matcher matcher;
       while (in.hasNext()){
          matcher = pattern.matcher(in.next());
          if (matcher.matches()){
-            if (matcher.group(1) == "/"){
-               
-               if (tagStack.pop() != matcher.group(2)) {
+            if (matcher.group(1) != null){
+               if ((tagStack.size()>0) && (tagStack.pop() != matcher.group(2))) {
                   return false;
                }
             } else {
