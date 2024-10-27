@@ -1,5 +1,6 @@
 import java.util.Stack;
 import java.util.Scanner;
+import java.util.Iterator;
 
 
 public class RemoveEvens {
@@ -22,7 +23,16 @@ public class RemoveEvens {
    //    before, theStack contains: [1, 2, 3, 2, 4, 5] <-- top
    //    after, theStack contains: [1, 3, 5] <-- top
    public static void removeEvens(Stack<Integer> theStack){
-
+      Stack<Integer> odds = new Stack<Integer>();
+      int i;
+      while (theStack.size()>0){
+         if ((i=theStack.pop())%2!=0){
+            odds.push(i);
+         }
+      }
+      while (odds.size()>0){
+         theStack.push(odds.pop());
+      }
    }
 
    // creates and returns a Stack of Integers from a String of space-separated
